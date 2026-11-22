@@ -339,24 +339,106 @@ An adjustable trip can still receive a zero shift at the optimum. That happens t
 
 ### 5.2 The exact model: sets, choices, and allowed shifts
 
-The implementation turns each allowed shift into a menu option. This gives a **mixed-integer linear program (MILP)**: some choices are binary, other variables are continuous, and its objective and constraints are linear in those variables.
+#### Finite-grid mixed-integer linear formulation
 
-**Units:** all equations and worked examples in this guide use **minutes**. A clock time can be written as minutes after service-day midnight: 16:05 is $16\times60+5=965$. The original formulation and code store timetable times and gaps in **seconds**, while shifts remain in minutes. Consequently, they use $d_j+60k$, $g_{pq}+60(x_q-x_p)$, and a factor of $1/(60|I|)$ when converting total waiting to a mean in minutes.
+The complete model is collected below so you can see the objective, decision variables, and constraints together. It is the same nominal Scope A formulation as in the [mathematical formulation document](../model/docs/Scope_A_Mathematical_Formulation_2026-11-21.md), expressed in **minutes throughout** to match this guide.
 
-| Symbol | Meaning in this study |
+**Unit convention:** $a_i$, $d_j$, and $r_i$ are times measured in **minutes after service-day midnight**. Waiting costs $c_{ijk}$, vehicle gaps $g_{pq}$, minimum gaps $m_{pq}$, headways $h_{e\ell}$, shifts $x_j$, and shift options $k$ are all in **minutes**. The assignment weights $y_{ijk}$ and binary switches $z_{jk}$ are dimensionless. Thus the transfer allowance is **3**, the headway tolerance is **5**, and the objective is average waiting in **minutes**. No factor of 60 is needed in this minute-based formulation.
+
+Before solving, calculate the passenger readiness times, the catchable connection options, and their waiting costs:
+
+$$
+\begin{aligned}
+r_i&=a_i+3, &&i\in I,\\
+F_i&=\{(j,k):j\in J,\ k\in K_j,\ d_j+k\ge r_i\}, &&i\in I,\\
+c_{ijk}&=d_j+k-r_i, &&i\in I,\ (j,k)\in F_i.
+\end{aligned}
+$$
+
+Here $F_i$ lists the departure-and-shift options that opportunity $i$ could catch, and $c_{ijk}$ is the corresponding nonnegative waiting time. Fixed onward departures have $K_j=\{0\}$. A potential connection to an adjustable trip becomes available only when its corresponding shift is selected.
+
+The variables are:
+
+| Variable | Meaning and domain |
 |---|---|
-| $I$ | The 41 incoming opportunities |
-| $J$ | The 37 eligible onward Route 215 departures |
-| $A\subset J$ | The six adjustable departures |
-| $K_j$ | The menu of allowed shifts for departure $j$ |
-| $L$ | The 12 relevant pairs of consecutive trips in the same scheduled vehicle block |
-| $H$ | The seven affected pairs of consecutive onward Route 215 departures |
-| $a_i$ | Incoming scheduled arrival for opportunity $i$; 41 indexed values |
-| $d_j$ | Original scheduled onward departure |
-| $r_i=a_i+3$ | Passenger readiness |
-| $g_{pq}$ | Original scheduled gap between the end of trip $p$ and start of trip $q$ |
-| $m_{pq}$ | Assumed minimum vehicle gap required for that pair |
-| $h_{e\ell}$ | Original headway between earlier departure $e$ and later departure $\ell$ |
+| $z_{jk}$ | Binary: one if adjustable trip $j$ uses shift $k$, zero otherwise |
+| $x_j$ | Resulting trip shift in minutes, determined by the selected $z_{jk}$; zero for fixed trips |
+| $y_{ijk}$ | Continuous, nonnegative assignment weight from opportunity $i$ to connection option $(j,k)\in F_i$ |
+
+Using $|I|=41$, define the MILP:
+
+$$
+\begin{aligned}
+\min\quad
+&\frac{1}{|I|}\sum_{i\in I}\sum_{(j,k)\in F_i}c_{ijk}y_{ijk}\\[4pt]
+\text{s.t.}\quad
+&\sum_{(j,k)\in F_i}y_{ijk}=1,
+&&\forall i\in I,\\[3pt]
+&y_{ijk}\le z_{jk},
+&&\forall i\in I,\ (j,k)\in F_i,\ j\in A,\\[3pt]
+&g_{pq}+x_q-x_p\ge m_{pq},
+&&\forall(p,q)\in L,\\[3pt]
+&h_{e\ell}-5\le h_{e\ell}+x_\ell-x_e\le h_{e\ell}+5,
+&&\forall(e,\ell)\in H,\\[3pt]
+&\sum_{k\in K_j}z_{jk}=1,
+&&\forall j\in A,\\[3pt]
+&x_j=\sum_{k\in K_j}kz_{jk},
+&&\forall j\in A,\\[3pt]
+&x_j=0,
+&&\forall\text{ modeled trips }j\notin A,\\[3pt]
+&z_{jk}\in\{0,1\},
+&&\forall j\in A,\ k\in K_j,\\[3pt]
+&y_{ijk}\ge0,
+&&\forall i\in I,\ (j,k)\in F_i.
+\end{aligned}
+$$
+
+Read the formulation from top to bottom:
+
+| Part | What it requires |
+|---|---|
+| Objective | Minimize average waiting over all 41 incoming opportunities |
+| Full assignment | Each opportunity receives one full unit of assignment across catchable options; fractional weights are permitted |
+| Link assignment to a selected shift | An opportunity cannot use a departure option whose binary switch is zero |
+| Vehicle availability | Each same-block trip pair retains at least its required turnaround/repositioning allowance |
+| Headway bounds | Each affected departure gap stays within five minutes of its original value |
+| One shift per selected trip | Exactly one allowed departure option is selected for each of the six adjustable trips |
+| Resulting shift | Calculate $x_j$ from the selected option |
+| Fixed trips | Every modeled trip outside $A$ keeps its original times, including fixed predecessors/successors on other routes |
+| Variable domains | Departure switches are binary; connection weights are continuous and nonnegative |
+
+The whole-trip rule accompanies this formulation: add $x_j$ to every arrival and departure time along selected trip $j$. It is applied when constructing the output timetable, so running and dwell durations remain unchanged and the vehicle-gap equations use the consistently shifted trip endpoints.
+
+**Why is this a finite-grid linear model?** Each $K_j$ is a finite menu of whole-minute shifts. Each catchable option and its waiting cost are computed in advance, so $c_{ijk}$ is a constant multiplying $y_{ijk}$. There is no multiplication of two decision variables, and no Big-M constant is needed to represent catchability. The binary $z$ variables make the formulation mixed-integer; they also force each derived $x_j$ to be one of its allowed whole-minute values.
+
+Continuous $y$ variables are sufficient here because, for a fixed timetable and without capacity restrictions, assigning each opportunity entirely to a minimum-cost available connection is optimal. Fractional optimal assignments can occur when costs tie. Section 5.4 explains this with the 18:20 and 18:22 readiness examples; Section 5.5 works through each constraint numerically.
+
+#### Symbols and units used in the formulation
+
+| Symbol | Meaning in this study | Unit or type |
+|---|---|---|
+| $I$ | The 41 incoming opportunities | Set of incoming trips |
+| $J$ | The 37 eligible onward Route 215 departures | Set of onward trips |
+| $A\subset J$ | The six adjustable departures | Set of selected trips |
+| $K_j$ | The menu of allowed shifts for departure $j$ | Set of whole-minute shift values |
+| $L$ | The 12 relevant pairs of consecutive trips in the same scheduled vehicle block | Set of trip pairs |
+| $H$ | The seven affected pairs of consecutive onward Route 215 departures | Set of departure pairs |
+| $a_i$ | Incoming scheduled arrival for opportunity $i$; 41 indexed values | Minutes after service-day midnight |
+| $d_j$ | Original scheduled onward departure | Minutes after service-day midnight |
+| $r_i=a_i+3$ | Passenger readiness | Minutes after service-day midnight |
+| $g_{pq}$ | Original scheduled gap between the end of trip $p$ and start of trip $q$ | Minutes |
+| $m_{pq}$ | Assumed minimum vehicle gap required for that pair | Minutes |
+| $h_{e\ell}$ | Original headway between earlier departure $e$ and later departure $\ell$ | Minutes |
+| $k$ | A candidate shift from $K_j$ | Minutes |
+| $x_j$ | Resulting shift for trip $j$ | Minutes |
+| $F_i$ | Catchable departure-and-shift options for opportunity $i$ | Set of pairs $(j,k)$ |
+| $c_{ijk}$ | Waiting cost for opportunity $i$ using option $(j,k)$ | Minutes |
+| $z_{jk}$ | Whether shift $k$ is selected for adjustable trip $j$ | Dimensionless binary value |
+| $y_{ijk}$ | Opportunity $i$'s assignment weight on option $(j,k)$ | Dimensionless continuous weight |
+
+For example, 16:05 is $16\times60+5=965$ minutes after midnight. A three-minute transfer allowance gives readiness at $965+3=968$, or 16:08. The multiplication by 60 here converts **clock hours to minutes**; the resulting time values used in the model are all minutes.
+
+**How this relates to the original code:** the source inputs store timetable times and gaps in seconds, while departure shifts are already in minutes. Divide the second-valued input fields by 60 before using them in the equations above; do not divide the minute-valued shifts. The original implementation instead converts shifts to seconds internally and converts the resulting objective back to minutes. These are equivalent representations of the same model. This guide consistently uses the minute-based version.
 
 #### “What exactly are the 12 pairs in $L$?”
 

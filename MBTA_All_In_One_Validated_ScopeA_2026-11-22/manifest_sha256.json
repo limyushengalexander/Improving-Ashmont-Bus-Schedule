@@ -1,18 +1,18 @@
 [
   {
     "path": "FILE_INVENTORY.txt",
-    "bytes": 31090,
-    "sha256": "8f9150e381690864b1af43bac48b0c4bd0183423f6e610e50178c58af84bb096"
+    "bytes": 31286,
+    "sha256": "6b133100987f57ee5c01be193eef6886fa5d1bc1626a96edaf3d3e7d6a3f4e81"
   },
   {
     "path": "README_FIRST.md",
-    "bytes": 8446,
-    "sha256": "b3ed93be113d9a02f9125db1dbf87e7cebb6d15a303e54f1a805d6f43b8008a8"
+    "bytes": 9737,
+    "sha256": "92d0e51874006baf0f80c533df01bcc5234d442014bbad57b18739bb49eadbf4"
   },
   {
     "path": "RELEASE_STATUS.json",
-    "bytes": 985,
-    "sha256": "2e050e07f78f94d63bd23a720b2884f94ab2f92653091fb49e08e74901f7fd02"
+    "bytes": 1313,
+    "sha256": "60f53ed38bea9ffd2d2c39225384da79550e0a7e6aed0eb3d0117f82e1da9eaf"
   },
   {
     "path": "course_requirements/README.md",
@@ -25,17 +25,22 @@
     "sha256": "a2b3aeae6ce34cb35ba365224349045af1798b6b86cb5cba5fa816b339474fc8"
   },
   {
-    "path": "docs/CURRENT_STATUS_2026-11-19.md",
-    "bytes": 2673,
-    "sha256": "b886f0a1b4d01156bd9479ea11daeec444adb4d1e536bc5731657c2aa3f60593"
+    "path": "docs/CURRENT_STATUS_2026-11-22.md",
+    "bytes": 3137,
+    "sha256": "f6b12845404a45aded9e699a5156d6560bad5f4a788428a6c0e85252bec06c4f"
   },
   {
-    "path": "docs/Scope_A_Validation_Experiments_2026-11-19.docx",
+    "path": "docs/MBTA_Ashmont_Project_Explained_Up_to_Interim_Report_2026-11-22.md",
+    "bytes": 74101,
+    "sha256": "c392c0d9c13ab7691d46629be8ddeb5abd8fce515fba60ef94bfd9fb505ec6f6"
+  },
+  {
+    "path": "docs/Scope_A_Validation_Experiments_2026-11-22.docx",
     "bytes": 249422,
     "sha256": "7f354a03255ec69a87bb2938d16a92f69d9fd658cd3d06312190df16891775d4"
   },
   {
-    "path": "docs/Scope_A_Validation_Experiments_2026-11-19.pdf",
+    "path": "docs/Scope_A_Validation_Experiments_2026-11-22.pdf",
     "bytes": 340480,
     "sha256": "7f8d0cfa5fe79e7ae1dc13bcafdc5d3b7e957b4ccb79b08551cf43246e995941"
   },
@@ -46,8 +51,8 @@
   },
   {
     "path": "docs/build_working_memo.py",
-    "bytes": 14246,
-    "sha256": "92463636658c2aa9fb6b3bea80adbd87c909df7246ee54d1e3ead75b4f5dfba8"
+    "bytes": 14338,
+    "sha256": "b4a96a18788d0f017055d6f0efc15cb971a4521e584b6f5a1f375a29e7b9ed37"
   },
   {
     "path": "docs/source_register.json",
@@ -131,13 +136,18 @@
   },
   {
     "path": "model/README.md",
-    "bytes": 914,
-    "sha256": "0573a0216e5004a99bdfdcd6852d16a3177241fb18a740160acbe7cf9cc1e209"
+    "bytes": 1077,
+    "sha256": "bc159bb4dc52127e3047c2505b2122ecf3b0bdecd87777dd538dee71e1a6498e"
   },
   {
     "path": "model/docs/Scope_A_Mathematical_Formulation.md",
     "bytes": 10906,
     "sha256": "304381e2409aeb2ff4681d14a3db8a41af95974333000f5b7afe821e3e21cb1e"
+  },
+  {
+    "path": "model/docs/Scope_A_Mathematical_Formulation_2026-11-21.md",
+    "bytes": 10828,
+    "sha256": "165efcd3857f454d176851c2162b5141c173ff86e60549fbaa09c9c6cf95b5e1"
   },
   {
     "path": "model/docs/Status_Nov06.md",

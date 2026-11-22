@@ -1,10 +1,12 @@
+FILE_INVENTORY.txt
 README_FIRST.md
 RELEASE_STATUS.json
 course_requirements/README.md
 course_requirements/Term_project_description.pdf
-docs/CURRENT_STATUS_2026-11-19.md
-docs/Scope_A_Validation_Experiments_2026-11-19.docx
-docs/Scope_A_Validation_Experiments_2026-11-19.pdf
+docs/CURRENT_STATUS_2026-11-22.md
+docs/MBTA_Ashmont_Project_Explained_Up_to_Interim_Report_2026-11-22.md
+docs/Scope_A_Validation_Experiments_2026-11-22.docx
+docs/Scope_A_Validation_Experiments_2026-11-22.pdf
 docs/VALIDATION_AND_EXPERIMENT_FINDINGS.md
 docs/build_working_memo.py
 docs/source_register.json
@@ -20,11 +22,13 @@ figures/04_individual_transfer_changes.png
 latest_interim/MBTA_Interim_Report_v2_2026-11-12.docx
 latest_interim/MBTA_Interim_Report_v2_2026-11-12.md
 latest_interim/MBTA_Interim_Report_v2_2026-11-12.pdf
+manifest_sha256.json
 model/Interim_Report_Draft_2026-11-06.docx
 model/Interim_Report_Draft_2026-11-06.pdf
 model/Project.toml
 model/README.md
 model/docs/Scope_A_Mathematical_Formulation.md
+model/docs/Scope_A_Mathematical_Formulation_2026-11-21.md
 model/docs/Status_Nov06.md
 model/inputs/adopted_scope_a_config.json
 model/inputs/baseline_connections.csv
@@ -37,6 +41,7 @@ model/inputs/outgoing.csv
 model/inputs/selected_trip_stop_times.csv
 model/inputs/shift_bounds_checked.csv
 model/inputs/vehicle_links.csv
+model/manifest_sha256.json
 model/results/enumeration_results.json
 model/results/first_departure_shift_distribution.csv
 model/results/optimized_connections.csv

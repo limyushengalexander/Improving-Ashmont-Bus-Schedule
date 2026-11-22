@@ -128,5 +128,6 @@ h('Evidence and limitations')
 p('Sources: uploaded historical GTFS and project archives; exact hashes and locations are in validation/source_zip_hashes.json. Official Julia, JuMP and Pkg documentation was used only for setup and solution-status handling (docs/source_register.json). No new observations replace the uploaded data. This is AI-assisted working analysis for team review, not a final student submission or MBTA-approved timetable.')
 d.core_properties.title='Scope A Validation and Experiment Working Memo'
 d.core_properties.subject='November 19, 2026; Python verified, Julia execution pending'
-d.save(ROOT/'docs/Scope_A_Validation_Experiments_2026-11-19.docx')
-print(ROOT/'docs/Scope_A_Validation_Experiments_2026-11-19.docx')
+# The filename follows the working release; the memo retains its November 19 analysis date.
+d.save(ROOT/'docs/Scope_A_Validation_Experiments_2026-11-22.docx')
+print(ROOT/'docs/Scope_A_Validation_Experiments_2026-11-22.docx')

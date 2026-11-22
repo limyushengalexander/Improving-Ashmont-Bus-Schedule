@@ -1,14 +1,19 @@
 # MBTA Ashmont — validated Scope A experiments and complete source collection
-**Latest release: November 19, 2026**  
+**Latest working release: November 22, 2026**
+
+**Computational evidence: November 19, 2026**
+
 **Team:** Alex Lim, Yun Ji Seo, Luran Wang
 
 ## Read first
 
-Open `docs/Scope_A_Validation_Experiments_2026-11-19.pdf` for a six-page review memo, or `docs/VALIDATION_AND_EXPERIMENT_FINDINGS.md` for the detailed text. The memo is working evidence, not the final course report. `docs/CURRENT_STATUS_2026-11-19.md` distinguishes completed work from remaining tasks.
+Open [the review memo](docs/Scope_A_Validation_Experiments_2026-11-22.pdf) for the six-page review, or [the experiment findings](docs/VALIDATION_AND_EXPERIMENT_FINDINGS.md) for the detailed text. The memo is working evidence, not the final course report. [Current status](docs/CURRENT_STATUS_2026-11-22.md) distinguishes completed work from remaining tasks. The [explained project guide](docs/MBTA_Ashmont_Project_Explained_Up_to_Interim_Report_2026-11-22.md) covers the model, worked examples, interim report, and later experiment findings.
+
+The November 22 revision updates package names, documentation, references, and integrity metadata. The memo's PDF/DOCX filenames now use November 22 to match the working release; their contents still record the November 19 analysis. No optimization, experiment, or Julia run was newly performed for this revision. The original `MBTA_All_In_One_Validated_ScopeA_2026-11-19.zip` remains the unchanged reference snapshot; this working folder supersedes its navigation and documentation, while preserving the computational evidence.
 
 **New result:** the original 13.5122-to-12.4634-minute scheduled improvement reproduces. The simple chronological heuristic obtains the **same** result. The unchanged nominal-optimal timetable is sensitive to the assumed passenger transfer allowance; under five minutes it is worse than the original timetable, although reoptimization can improve performance. Do not describe the current timetable as robust to delays or transfer-time uncertainty.
 
-**Julia execution remains pending.** No Julia executable is available in the current environment, and official runtime retrieval failed. The reviewed Julia source, application environment and Windows/macOS/Linux run instructions are included; none is presented as an executed Julia result. The Python MILP and enumeration calculations actually ran.
+**Julia execution remains pending.** The recorded November 19 authoring environment had no Julia executable, and official runtime retrieval failed. No later Julia execution evidence has been added. The reviewed Julia source, application environment and Windows/macOS/Linux run instructions are included; none is presented as an executed Julia result. The Python MILP and enumeration calculations actually ran.
 
 ## Is this package complete?
 
@@ -42,9 +47,9 @@ Complete source collection does **not** mean the entire term project is finished
 | `course_requirements/` | Original term-project description recovered from the consolidation |
 | `source_archives/` | All eight original archives, unmodified |
 
-Files inside `source_archives` describe their historical status; use the root release status and November 19 memo for the current state. The initial mathematical formulation remains under `model/docs/`; the new experiment definitions do not overwrite that source record.
+Files inside `source_archives` describe their historical status; use the November 22 current-status document and root release metadata for the current state, and the November 19 memo for the recorded computational findings. The initial mathematical formulation remains under `model/docs/`; the new experiment definitions do not overwrite that source record.
 
-## What was executed?
+## What was executed on November 19?
 
 - Fresh raw-GTFS extraction with eight matching input outputs.
 - Original Python enumeration and SciPy/HiGHS MILP, recovering 71,673 feasible nominal timetables and the same unique optimum.
@@ -101,7 +106,7 @@ The verifier requires actual `jump_*` files, a solver status/feasibility certifi
 
 ## Packaging and integrity
 
-`manifest_sha256.json` describes all shipped files except the manifest itself. Run `python validation/verify_release_manifest.py` before modifying or rerunning the package. The outer ZIP has a separate SHA-256 file. Logs and flags are not substitutes for actual model execution.
+`FILE_INVENTORY.txt` lists the current working-release files. The root `manifest_sha256.json` records their sizes and SHA-256 hashes, excluding the manifest itself. Run `python validation/verify_release_manifest.py` before modifying or rerunning the package. The manifests under `model/` and `validation/original_model_manifest_sha256.json` retain earlier model provenance; the root manifest describes this November 22 working release. No new November 22 outer ZIP or companion ZIP checksum is included in this revision. Logs and flags are not substitutes for actual model execution.
 
 ## Project interpretation
 

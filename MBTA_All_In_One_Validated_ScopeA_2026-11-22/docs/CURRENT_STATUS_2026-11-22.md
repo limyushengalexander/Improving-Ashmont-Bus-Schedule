@@ -1,10 +1,12 @@
-# Current status — November 19, 2026
+# Current status — November 22, 2026
+
+**Status reviewed November 22; computational evidence recorded November 19.** This working revision updates the package folder, status/guide/memo filenames, documentation links, inventory, and release checksums. The memo contents, model inputs, solver code, experiment results, source archives, and November 12 interim report retain their historical evidence. No new optimization or Julia execution is claimed by changing the release date.
 
 | Requested work | Status | Evidence |
 |---|---|---|
 | Protect Scope A baseline | Completed | Immutable original archives, input hashes, fresh raw-GTFS rebuild and original-result matches |
 | Review formulation and code | Completed within the stated model scope | Exact formulation review, applied source patch, changes diff, unit and independent evaluator checks |
-| Run Julia/JuMP and compare | **Pending / environment blocked** | No Julia executable; official runtime download and package-server requests failed; no invented run log |
+| Run Julia/JuMP and compare | **Pending / no execution recorded** | The November 19 authoring environment lacked Julia and runtime retrieval failed; no later Julia run evidence has been added |
 | Rerun independent calculations | Completed | Exhaustive enumeration plus fresh SciPy/HiGHS zero-gap result |
 | Simple feasible heuristic | Completed | Prespecified single chronological pass; matches nominal optimum |
 | Sensitivity and model experiments | Completed in Python | 38 declared cases: 32 optimal, six structurally infeasible; 31 independently enumerated |

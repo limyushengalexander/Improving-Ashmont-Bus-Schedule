@@ -1,5 +1,10 @@
 {
-  "release_date": "2026-11-19",
+  "release_date": "2026-11-22",
+  "reference_release_date": "2026-11-19",
+  "computational_run_date": "2026-11-19",
+  "revision_type": "DOCUMENTATION_AND_PACKAGE_RENAME",
+  "computations_rerun_for_this_revision": false,
+  "reference_snapshot": "MBTA_All_In_One_Validated_ScopeA_2026-11-19.zip",
   "source_collection_complete": true,
   "original_zip_archives_included": 8,
   "input_snapshot_changed": false,
@@ -23,6 +28,6 @@
   "heuristic_nominal_result": "MATCHES_MILP_OPTIMUM",
   "fixed_nominal_timetable_transfer_robustness": "NOT_ESTABLISHED; loses to baseline under longer allowance",
   "latest_interim_report": "November 12 v2 preserved unchanged",
-  "new_document_type": "working validation/experiment memo, not final course report",
+  "new_document_type": "November 22 working revision and explanatory guide; November 19 validation/experiment memo retained; not final course report",
   "no_background_work_promised": true
 }

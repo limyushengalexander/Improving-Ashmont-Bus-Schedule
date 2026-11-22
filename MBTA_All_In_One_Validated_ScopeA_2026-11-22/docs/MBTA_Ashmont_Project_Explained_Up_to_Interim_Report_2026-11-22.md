@@ -911,7 +911,7 @@ No. The November 19 package preserves the November 12 report unchanged. It adds 
 
 This creates an important date distinction: the interim report lists heuristic comparison and sensitivity analysis as **next steps**, because they had not yet been completed at that report's date. The November 19 status records their later completion. Both documents can be accurate about their respective stages.
 
-Similarly, the formulation's original November 6 next-steps list is historical. Use the later [current-status document](CURRENT_STATUS_2026-11-19.md) to identify outstanding work.
+Similarly, the formulation's original November 6 next-steps list is historical. Use the [November 22 current-status document](CURRENT_STATUS_2026-11-22.md), based on the November 19 computational evidence, to identify outstanding work.
 
 ## 9. What remains—and how Scope B fits
 
@@ -1017,13 +1017,13 @@ This formulation describes an intended extension, not an executed result. Histor
 
 ### “Which files should I use from now on?”
 
-Use **`MBTA_All_In_One_Validated_ScopeA_2026-11-19.zip`** as the unchanged reference snapshot and its extracted working copy for ongoing work. The reference contains the earlier source archives; their old “pending,” “partial,” or “missing file” statements describe earlier stages.
+Use **`MBTA_All_In_One_Validated_ScopeA_2026-11-22/`** as the current working folder. It derives from **`MBTA_All_In_One_Validated_ScopeA_2026-11-19.zip`**, which remains the unchanged reference snapshot. The November 22 revision updates documentation, filenames, and package metadata; the computational evidence still comes from November 19. The reference contains the earlier source archives; their old “pending,” “partial,” or “missing file” statements describe earlier stages.
 
 | Purpose | File or location |
 |---|---|
 | Plain-language explanation with your questions | This guide |
 | Package orientation | [README_FIRST.md](../README_FIRST.md) |
-| Latest packaged completion status | [CURRENT_STATUS_2026-11-19.md](CURRENT_STATUS_2026-11-19.md) |
+| Latest packaged completion status | [CURRENT_STATUS_2026-11-22.md](CURRENT_STATUS_2026-11-22.md) |
 | Latest packaged experiment findings | [VALIDATION_AND_EXPERIMENT_FINDINGS.md](VALIDATION_AND_EXPERIMENT_FINDINGS.md) |
 | Original model mathematics with readable delimiters | [Scope_A_Mathematical_Formulation_2026-11-21.md](../model/docs/Scope_A_Mathematical_Formulation_2026-11-21.md) |
 | Latest interim report, still November 12 v2 | [Interim report](../latest_interim/MBTA_Interim_Report_v2_2026-11-12.md) |

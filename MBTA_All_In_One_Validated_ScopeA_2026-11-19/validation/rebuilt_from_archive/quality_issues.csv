@@ -1,0 +1,6 @@
+severity,code,detail
+review,restricted_or_linked_transfer_records,"Review transfer prohibitions and linked-trip rules. They are exported, not auto-applied."
+review,archive_applicability_unverified,Calendar validity is not proof this publication was in force on this date. Compare the LAMP archive.
+review,operating_assumptions_not_certified,"Transfer time, turnaround and headway limits are explicit assumptions, not verified MBTA rules."
+review,public_vehicle_blocks_only,"Crew, garage movements, cross-service-day links and operational dispatch are outside this extraction."
+review,transfer_rules_manual_review,Raw transfers/pathways are exported. Confirm applicable rule specificity and boarding locations before finalizing the allowance.

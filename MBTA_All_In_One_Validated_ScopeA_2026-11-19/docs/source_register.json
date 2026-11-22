@@ -1,0 +1,41 @@
+[
+  {
+    "id": "A1",
+    "type": "uploaded historical data",
+    "location": "source_archives/20261014.zip",
+    "use": "All scheduled study records; rebuilt locally on 2026-11-19"
+  },
+  {
+    "id": "A2",
+    "type": "uploaded original model",
+    "location": "source_archives/MBTA_ScopeA_Nov06_Model_and_Interim_Report.zip",
+    "use": "Original formulation, solver source, input files and reference results"
+  },
+  {
+    "id": "A3",
+    "type": "uploaded revision",
+    "location": "source_archives/MBTA_Project_Consolidation_2026-11-12_PARTIAL.zip",
+    "use": "Current one-page report and supplied runtime patch; old missing-file status is superseded"
+  },
+  {
+    "id": "W1",
+    "type": "official software documentation",
+    "url": "https://julialang.org/downloads/",
+    "accessed": "2026-11-19",
+    "use": "Runtime installation attempt; not a new MBTA data source"
+  },
+  {
+    "id": "W2",
+    "type": "official software documentation",
+    "url": "https://jump.dev/JuMP.jl/stable/manual/solutions/",
+    "accessed": "2026-11-19",
+    "use": "Separate termination, primal feasibility, objective bound and relative gap; motivates truthful pending Julia status"
+  },
+  {
+    "id": "W3",
+    "type": "official software documentation",
+    "url": "https://pkgdocs.julialang.org/v1/environments/",
+    "accessed": "2026-11-19",
+    "use": "Project instantiation and saving the resolved Manifest for reproducibility"
+  }
+]

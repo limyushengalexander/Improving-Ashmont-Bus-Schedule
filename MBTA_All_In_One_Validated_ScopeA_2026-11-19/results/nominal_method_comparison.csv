@@ -1,0 +1,4 @@
+method,total_wait_cost_sec,mean_wait_cost_min,mean_wait_min,max_wait_min,mean_total_transfer_min,p90_wait_min,served,stranded,within_10_min,after_1900_connections,moved_trips,total_absolute_shift_min
+Existing timetable,33240,13.512195121951219,13.512195121951219,30.0,16.51219512195122,25.0,41,0,15,2,0,0.0
+Single-pass heuristic,30660,12.463414634146341,12.463414634146341,27.0,15.463414634146341,24.0,41,0,20,2,4,7.0
+MILP / exact optimum,30660,12.463414634146341,12.463414634146341,27.0,15.463414634146341,24.0,41,0,20,2,4,7.0

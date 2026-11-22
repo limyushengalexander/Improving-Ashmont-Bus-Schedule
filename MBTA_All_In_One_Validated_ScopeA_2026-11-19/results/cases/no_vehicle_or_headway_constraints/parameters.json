@@ -1,0 +1,16 @@
+{
+  "name": "no_vehicle_or_headway_constraints",
+  "groups": [
+    "ablation"
+  ],
+  "parameters": {
+    "transfer_seconds": 180,
+    "turnaround_seconds": 180,
+    "berth_seconds": 120,
+    "max_shift_seconds": 300,
+    "headway_deviation_seconds": 300,
+    "grid_seconds": 60,
+    "enforce_vehicle": false,
+    "enforce_headways": false
+  }
+}

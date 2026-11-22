@@ -1,0 +1,25 @@
+{
+  "shift_seconds": [
+    -120,
+    0,
+    -120,
+    -60,
+    120,
+    0
+  ],
+  "metrics": {
+    "total_wait_cost_sec": 30660,
+    "mean_wait_cost_min": 12.463414634146341,
+    "mean_wait_min": 12.463414634146341,
+    "max_wait_min": 27.0,
+    "mean_total_transfer_min": 15.463414634146341,
+    "p90_wait_min": 24.0,
+    "served": 41,
+    "stranded": 0,
+    "within_10_min": 20,
+    "after_1900_connections": 2,
+    "moved_trips": 4,
+    "total_absolute_shift_min": 7.0
+  },
+  "passes": 2
+}

@@ -1,0 +1,22 @@
+{
+  "solver": "SciPy milp (HiGHS)",
+  "success": true,
+  "status_code": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "objective_mean_wait_minutes": 12.463414634146341,
+  "shift_vector_minutes": [
+    -2,
+    0,
+    -2,
+    -1,
+    2,
+    0
+  ],
+  "variables": 1429,
+  "shift_binaries": 43,
+  "transfer_assignments_continuous": 1386,
+  "constraints": 1042,
+  "mip_gap": 0.0,
+  "verified_equal_to_exhaustive_enumeration": true,
+  "julia_execution_status": "NOT_EXECUTED_in_current_environment"
+}

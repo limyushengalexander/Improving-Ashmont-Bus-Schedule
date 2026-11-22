@@ -1,0 +1,61 @@
+{
+  "source_archive_sha256": "1b5cf25363f7385de8c22c22fe6a336d91dd68616494526ca14994e3b86dd004",
+  "service_date": "2026-10-15",
+  "locked_inputs": [
+    {
+      "path": "model/inputs/adopted_scope_a_config.json",
+      "sha256": "34214089efb9664334c2b8cb2b04ac71939401ec428321fe20fa13a8cb6e3815"
+    },
+    {
+      "path": "model/inputs/baseline_connections.csv",
+      "sha256": "0f5b26a52e7e00ffb57450f54056f1310686f95b73ea76ec268224f695bf947e"
+    },
+    {
+      "path": "model/inputs/block_trip_endpoints.csv",
+      "sha256": "ec15ad972ab92a7fb9f086c9249986260a57f915eef1add6f4a3a902d3a768f1"
+    },
+    {
+      "path": "model/inputs/feed_info.csv",
+      "sha256": "0ebbe684191adafe8a911aa22e2edb62789c7b5dd631c52c5f35dd1a4af29cc6"
+    },
+    {
+      "path": "model/inputs/headway_limits.csv",
+      "sha256": "e900542bdc5d7e6aabff966f8f60c3895034170a01112cdde1b6936ff32d34a3"
+    },
+    {
+      "path": "model/inputs/incoming.csv",
+      "sha256": "08d2ce211c57e06cc964cd0a215db723cf24e1f2eee0917f47917795f99fbce6"
+    },
+    {
+      "path": "model/inputs/model_parameters.csv",
+      "sha256": "4620ea7a28c14ee592626ea8c470efe70145f6ff1070df74ecc3fb73414e2d94"
+    },
+    {
+      "path": "model/inputs/outgoing.csv",
+      "sha256": "3b9f144596ea70a54d4f59378770370602b903146f6e32c95c8ca728bb4f000f"
+    },
+    {
+      "path": "model/inputs/selected_trip_stop_times.csv",
+      "sha256": "8f8ab9c40ebbe09cbb119efb82838e5356e387085dc4f45bc47445bf1cddcf9e"
+    },
+    {
+      "path": "model/inputs/shift_bounds_checked.csv",
+      "sha256": "913006ebd9ce3495cf48f61714c34030b39b30c6075e164b152c3995c976cb5b"
+    },
+    {
+      "path": "model/inputs/vehicle_links.csv",
+      "sha256": "11693ee47de65f57b94453f6e584ab927146794cc8ed5127a985c3dd3f5e3c25"
+    }
+  ],
+  "reference_baseline_total_wait_sec": 33240,
+  "reference_optimized_total_wait_sec": 30660,
+  "reference_shift_seconds": [
+    -120,
+    0,
+    -120,
+    -60,
+    120,
+    0
+  ],
+  "note": "A regression reference, never an input that fixes optimization choices."
+}

@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-15",
+  "model": "Scope A, six one-minute-grid shifts, fixed 3-minute allowance, vehicle and headway constraints",
+  "status": "EXACT EXHAUSTIVE ENUMERATION ON FINITE GRID; Julia/JuMP not executed",
+  "num_feasible_joint_shift_combinations": 71673,
+  "num_optimal_joint_shift_combinations": 1,
+  "baseline": {
+    "total_platform_wait_sec": 33240,
+    "mean_platform_wait_min": 13.512195121951219,
+    "max_platform_wait_min": 30.0,
+    "mean_total_transfer_min": 16.51219512195122,
+    "served": 41,
+    "stranded": 0,
+    "connections_at_or_under_10min": 15,
+    "after_1900_connections": 2,
+    "route_mean_platform_wait_min": {
+      "22": 12.88888888888889,
+      "23": 14.0
+    }
+  },
+  "best": {
+    "total_platform_wait_sec": 30660,
+    "mean_platform_wait_min": 12.463414634146341,
+    "max_platform_wait_min": 27.0,
+    "mean_total_transfer_min": 15.463414634146341,
+    "served": 41,
+    "stranded": 0,
+    "connections_at_or_under_10min": 20,
+    "after_1900_connections": 2,
+    "route_mean_platform_wait_min": {
+      "22": 12.5,
+      "23": 12.434782608695652
+    }
+  },
+  "best_shift_vector_min": [
+    -2,
+    0,
+    -2,
+    -1,
+    2,
+    0
+  ],
+  "original_departure_times": [
+    "16:20:00",
+    "16:50:00",
+    "17:20:00",
+    "17:50:00",
+    "18:20:00",
+    "18:52:00"
+  ],
+  "optimal_departure_times": [
+    "16:18:00",
+    "16:50:00",
+    "17:18:00",
+    "17:49:00",
+    "18:22:00",
+    "18:52:00"
+  ],
+  "mean_wait_improvement_min": 1.048780487804878,
+  "relative_mean_wait_improvement_pct": 7.76173285198556,
+  "improved_opportunities": 18,
+  "worsened_opportunities": 7,
+  "unchanged_opportunities": 16,
+  "total_wait_saved_min": 43,
+  "equal_weights_not_ridership": true,
+  "model_assumptions_not_mbta_certified": true
+}

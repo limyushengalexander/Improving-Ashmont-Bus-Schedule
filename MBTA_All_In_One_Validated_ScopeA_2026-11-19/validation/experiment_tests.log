@@ -1,0 +1,39 @@
+test_all_38_cases_present (test_validation_and_experiments.ValidationTests.test_all_38_cases_present) ... ok
+test_all_block_neighbors_no_overlap (test_validation_and_experiments.ValidationTests.test_all_block_neighbors_no_overlap) ... ok
+test_all_feasible_solver_gaps_zero (test_validation_and_experiments.ValidationTests.test_all_feasible_solver_gaps_zero) ... ok
+test_bad_parameter_rejected (test_validation_and_experiments.ValidationTests.test_bad_parameter_rejected) ... ok
+test_derived_domains_match_locked_case (test_validation_and_experiments.ValidationTests.test_derived_domains_match_locked_case) ... ok
+test_domains_rebuilt_when_berth_changes (test_validation_and_experiments.ValidationTests.test_domains_rebuilt_when_berth_changes) ... ok
+test_domains_rebuilt_when_turnaround_changes (test_validation_and_experiments.ValidationTests.test_domains_rebuilt_when_turnaround_changes) ... ok
+test_exact_and_solver_agreement_recorded (test_validation_and_experiments.ValidationTests.test_exact_and_solver_agreement_recorded) ... ok
+test_exact_readiness_rule (test_validation_and_experiments.ValidationTests.test_exact_readiness_rule) ... ok
+test_finer_grid_checked_without_continuous_claim (test_validation_and_experiments.ValidationTests.test_finer_grid_checked_without_continuous_claim) ... ok
+test_five_minute_stress_not_new_optimization (test_validation_and_experiments.ValidationTests.test_five_minute_stress_not_new_optimization) ... ok
+test_full_after_window_service_retained (test_validation_and_experiments.ValidationTests.test_full_after_window_service_retained) ... ok
+test_full_trajectory_audited (test_validation_and_experiments.ValidationTests.test_full_trajectory_audited) ... ok
+test_heuristic_not_inferior_in_saved_suite (test_validation_and_experiments.ValidationTests.test_heuristic_not_inferior_in_saved_suite) ... ok
+test_infeasible_turnaround_certificate (test_validation_and_experiments.ValidationTests.test_infeasible_turnaround_certificate) ... ok
+test_late_eligible_service_preferred_even_long_wait (test_validation_and_experiments.ValidationTests.test_late_eligible_service_preferred_even_long_wait) ... ok
+test_loss_and_gain_distribution (test_validation_and_experiments.ValidationTests.test_loss_and_gain_distribution) ... ok
+test_no_benefit_claim_for_infeasible_cases (test_validation_and_experiments.ValidationTests.test_no_benefit_claim_for_infeasible_cases) ... ok
+test_no_heuristic_from_infeasible_start (test_validation_and_experiments.ValidationTests.test_no_heuristic_from_infeasible_start) ... ok
+test_no_julia_success_claim (test_validation_and_experiments.ValidationTests.test_no_julia_success_claim) ... ok
+test_nominal_optimum_recomputed (test_validation_and_experiments.ValidationTests.test_nominal_optimum_recomputed) ... ok
+test_non_grid_shift_rejected (test_validation_and_experiments.ValidationTests.test_non_grid_shift_rejected) ... ok
+test_one_second_allowance_increase_changes_connections (test_validation_and_experiments.ValidationTests.test_one_second_allowance_increase_changes_connections) ... ok
+test_only_penalize_no_remaining_service (test_validation_and_experiments.ValidationTests.test_only_penalize_no_remaining_service) ... ok
+test_original_input_hashes_preserved (test_validation_and_experiments.ValidationTests.test_original_input_hashes_preserved) ... ok
+test_primary_heuristic_without_targets (test_validation_and_experiments.ValidationTests.test_primary_heuristic_without_targets) ... ok
+test_relaxation_not_declared_feasible_under_full_rules (test_validation_and_experiments.ValidationTests.test_relaxation_not_declared_feasible_under_full_rules) ... ok
+test_repeated_pass_does_not_change_primary (test_validation_and_experiments.ValidationTests.test_repeated_pass_does_not_change_primary) ... ok
+test_shift_cap_checked_independently (test_validation_and_experiments.ValidationTests.test_shift_cap_checked_independently) ... ok
+test_source_baseline_reproduced (test_validation_and_experiments.ValidationTests.test_source_baseline_reproduced) ... ok
+test_tight_headway_changes_feasibility (test_validation_and_experiments.ValidationTests.test_tight_headway_changes_feasibility) ... ok
+test_two_minute_cap_retains_optimum (test_validation_and_experiments.ValidationTests.test_two_minute_cap_retains_optimum) ... ok
+test_zero_headway_tolerance_forces_status_quo (test_validation_and_experiments.ValidationTests.test_zero_headway_tolerance_forces_status_quo) ... ok
+test_zero_shift_cap_forces_status_quo (test_validation_and_experiments.ValidationTests.test_zero_shift_cap_forces_status_quo) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.275s
+
+OK

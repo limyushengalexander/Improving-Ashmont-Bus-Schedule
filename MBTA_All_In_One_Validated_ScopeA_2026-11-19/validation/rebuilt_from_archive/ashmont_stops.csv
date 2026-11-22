@@ -1,0 +1,41 @@
+stop_id,stop_code,stop_name,stop_desc,platform_code,platform_name,stop_lat,stop_lon,zone_id,stop_address,stop_url,level_id,location_type,parent_station,wheelchair_boarding,municipality,on_street,at_street,vehicle_type
+3071,3071,Neponset Ave @ Ashmont St,,,,42.289943,-71.048434,LocalBus,,https://www.mbta.com/stops/3071,,0,,1,Boston,Neponset Avenue,Ashmont Street,3
+3082,3082,Adams St @ Ashmont St,,,,42.288174,-71.055221,LocalBus,,https://www.mbta.com/stops/3082,,0,,1,Boston,Adams Street,Ashmont Street,3
+518,518,Washington St @ Ashmont St,,,,42.285485,-71.071094,LocalBus,,https://www.mbta.com/stops/518,,0,,1,Boston,Washington Street,Ashmont Street,3
+8684,8684,Adams St @ Ashmont St,,,,42.28829,-71.055445,LocalBus,,https://www.mbta.com/stops/8684,,0,,1,Boston,Adams Street,Ashmont Street,3
+place-asmnl,,Ashmont,,,,42.28452,-71.063777,,"Dorchester Ave and Ashmont St, Boston, MA 02124",https://www.mbta.com/stops/place-asmnl,,1,,1,Boston,,,
+334,334,Ashmont,Ashmont - Busway,,Busway,42.284195,-71.063879,LocalBus,,https://www.mbta.com/stops/place-asmnl,level_ground,0,place-asmnl,1,Boston,Busway,,3
+70093,70093,Ashmont,Ashmont - Red Line - Exit Only,,Exit Only,42.284508,-71.063833,RapidTransit,,https://www.mbta.com/stops/place-asmnl,level_-1_platform,0,place-asmnl,1,Boston,,,1
+70094,70094,Ashmont,Ashmont - Red Line - Alewife,,Alewife,42.28453,-71.063725,RapidTransit,,https://www.mbta.com/stops/place-asmnl,level_-1_platform,0,place-asmnl,1,Boston,,,1
+70261,70261,Ashmont,Ashmont - Mattapan Line,,Mattapan Line,42.283768,-71.063191,RapidTransit,,https://www.mbta.com/stops/place-asmnl,level_ground,0,place-asmnl,1,Boston,,,0
+door-asmnl-beale,,Beale St,Beale St,,,42.283765,-71.063468,,,,level_-1.5_in_street,2,place-asmnl,1,Boston,,,
+door-asmnl-matpn,,Mattapan Line (Lobby),Mattapan Line (Lobby),,,42.283928,-71.063598,,,,level_ground,2,place-asmnl,1,Boston,,,
+door-asmnl-peabody,,Peabody Square,Peabody Square,,,42.285204,-71.064223,,,,level_in_street,2,place-asmnl,1,Boston,,,
+door-asmnl-radford,,Radford Lane,Radford Lane,,,42.283587,-71.062983,,,,level_-1.5_in_street,2,place-asmnl,1,Boston,,,
+door-asmnl-rdexits,,Buses,Buses,,,42.284449,-71.063865,,,,level_ground,2,place-asmnl,2,Boston,,,
+node-437-lobby,,Ashmont,"Ashmont - Top of escalator from Red Line platform to Peabody Square, busway",,,42.284978,-71.064163,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-437-platform,,Ashmont,"Ashmont - Bottom of escalator from Red Line platform to Peabody Square, busway",,,42.28491,-71.064123,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-438-lobby,,Ashmont,"Ashmont - Top of escalator from Red Line platform to Mattapan Line, busway",,,42.284065,-71.063637,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-438-platform,,Ashmont,"Ashmont - Bottom of escalator from Red Line platform to Mattapan Line, busway",,,42.284128,-71.063672,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-968-lobby,,Ashmont,Ashmont - Top of elevator from Peabody Square to Alewife platform,,,42.284995,-71.063875,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-968-platform,,Ashmont,Ashmont - Bottom of elevator from Peabody Square to Alewife platform,,,42.284995,-71.063875,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-969-lobby,,Ashmont,"Ashmont - Top of elevator from Mattapan Line, busway to Alewife platform",,,42.284205,-71.063422,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-969-platform,,Ashmont,"Ashmont - Bottom of elevator from Mattapan Line, busway to Alewife platform",,,42.284205,-71.063422,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-970-lobby,,Ashmont,"Ashmont - Top of elevator between Red Line platform and lobby, busway, Mattapan Line",,,42.284479,-71.063875,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-970-platform,,Ashmont,"Ashmont - Bottom of elevator between Red Line platform and lobby, busway, Mattapan Line",,,42.284479,-71.063875,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-asmnl-bealeramp,,Ashmont,Ashmont - Top of Beale Street ramp,,,42.283925,-71.063505,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-asmnl-mtpfarepaid,,Ashmont,Ashmont - Paid side of fare gates,,,42.284097,-71.063445,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-mtpfareunpaid,,Ashmont,Ashmont - Unpaid side of fare gates,,,42.284097,-71.063445,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-mtpnbstair-lobby,,Ashmont,"Ashmont - Top of stairs from Mattapan Line, busway to Alewife platform",,,42.284137,-71.063424,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-mtpnbstair-platform,,Ashmont,"Ashmont - Bottom of stairs from Mattapan Line, busway to Alewife platform",,,42.284219,-71.063473,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-asmnl-peafarepaid,,Ashmont,Ashmont - Paid side of fare gates,,,42.285063,-71.063999,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-peafareunpaid,,Ashmont,Ashmont - Unpaid side of fare gates,,,42.285063,-71.063999,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-peanbstair-lobby,,Ashmont,Ashmont - Top of stairs from Peabody Square to Alewife platform,,,42.285047,-71.063944,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-peanbstair-platform,,Ashmont,Ashmont - Bottom of stairs from Peabody Square to Alewife platform,,,42.284958,-71.063895,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-asmnl-peasbstair-lobby,,Ashmont,Ashmont - Top of stairs from Red Line platform to Peabody Square,,,42.284736,-71.064023,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-peasbstair-platform,,Ashmont,Ashmont - Bottom of stairs from Red Line platform to Peabody Square,,,42.284652,-71.063975,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-asmnl-radfarepaid,,Ashmont,Ashmont - Paid side of fare gates,,,42.283572,-71.06297,,,,level_-1.5_in_street,3,place-asmnl,1,Boston,,,
+node-asmnl-radfareunpaid,,Ashmont,Ashmont - Unpaid side of fare gates,,,42.283572,-71.06297,,,,level_-1.5_in_street,3,place-asmnl,1,Boston,,,
+node-asmnl-radfordramp,,Ashmont,Ashmont - Top of Radford Lane ramp,,,42.283964,-71.063341,,,,level_-1_platform,3,place-asmnl,1,Boston,,,
+node-asmnl-rdexstair-lobby,,Ashmont,Ashmont - Top of stairs from Red Line platform to busway,,,42.284302,-71.063774,,,,level_ground,3,place-asmnl,1,Boston,,,
+node-asmnl-rdexstair-platform,,Ashmont,Ashmont - Bottom of stairs from Red Line platform to busway,,,42.284398,-71.063827,,,,level_-1_platform,3,place-asmnl,1,Boston,,,

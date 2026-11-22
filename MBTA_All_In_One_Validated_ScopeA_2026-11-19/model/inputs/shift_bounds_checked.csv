@@ -1,0 +1,7 @@
+departure,scheduled_gap_before_min,scheduled_gap_after_min,next_route,different_quincy_berth,required_gap_before_min,required_gap_after_min,earliest_shift_min,latest_shift_min,earliest_departure,latest_departure,zero_shift_passes
+16:20,5,6,220,true,3,5,-2,1,16:18,16:21,true
+16:50,5,18,225,true,3,5,-2,5,16:48,16:55,true
+17:20,5,9,216,true,3,5,-2,4,17:18,17:24,true
+17:50,5,16,225,true,3,5,-2,5,17:48,17:55,true
+18:20,5,8,215,false,3,3,-2,5,18:18,18:25,true
+18:52,7,6,215,false,3,3,-4,3,18:48,18:55,true

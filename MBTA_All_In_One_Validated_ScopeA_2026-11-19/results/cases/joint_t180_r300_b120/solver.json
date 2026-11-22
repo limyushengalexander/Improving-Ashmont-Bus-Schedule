@@ -1,0 +1,12 @@
+{
+  "status": "INFEASIBLE",
+  "method": "empty_domain_certificate",
+  "conflicting_bounds": [
+    {
+      "trip_id": "78853769",
+      "lower_sec": 0,
+      "upper_sec": -60
+    }
+  ],
+  "elapsed_seconds": 2.3484999985612376e-05
+}

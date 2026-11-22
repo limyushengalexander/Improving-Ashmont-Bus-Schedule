@@ -1,0 +1,7 @@
+parameter,value
+transfer_allowance_seconds,180
+stranded_penalty_seconds,3600
+min_turnaround_seconds,180
+headway_deviation_seconds,300
+maximum_shift_seconds,300
+integer_shift_step_seconds,60

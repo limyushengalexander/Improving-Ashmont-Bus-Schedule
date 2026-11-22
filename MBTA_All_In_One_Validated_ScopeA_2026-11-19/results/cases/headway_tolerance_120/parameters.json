@@ -1,0 +1,16 @@
+{
+  "name": "headway_tolerance_120",
+  "groups": [
+    "one_at_a_time"
+  ],
+  "parameters": {
+    "transfer_seconds": 180,
+    "turnaround_seconds": 180,
+    "berth_seconds": 120,
+    "max_shift_seconds": 300,
+    "headway_deviation_seconds": 120,
+    "grid_seconds": 60,
+    "enforce_vehicle": true,
+    "enforce_headways": true
+  }
+}

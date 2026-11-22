@@ -1,0 +1,90 @@
+--- original/run_scope_a.jl
++++ reviewed/run_scope_a_reviewed.jl
+@@ -2,7 +2,8 @@
+ # The same date, input tables, and assumed constraints as reference_enumeration.py.
+ # Requires Julia + CSV.jl, DataFrames.jl, JuMP.jl, HiGHS.jl.
+ # Run from project root: julia --project=. src/run_scope_a.jl
+-# No Julia executable was available in the preparation environment; see README.
++# Original source: November 6 model package. Runtime-safety edits applied November 19.
++# No Julia executable is available in this environment; this revised source is not execution-validated.
+ using CSV
+ using DataFrames
+ using JuMP
+@@ -26,13 +27,17 @@
+     return parts[1]*3600 + parts[2]*60 + parts[3]
+ end
+ 
+-incoming = CSV.read(joinpath(INPUTS, "incoming.csv"), DataFrame; types=Dict(:trip_id=>String, :route_id=>String))
+-outgoing = CSV.read(joinpath(INPUTS, "outgoing.csv"), DataFrame; types=Dict(:trip_id=>String))
++incoming = CSV.read(joinpath(INPUTS, "incoming.csv"), DataFrame;
++    types=Dict(:trip_id=>String, :route_id=>String,
++               :arrival_time=>String, :departure_time=>String))
++outgoing = CSV.read(joinpath(INPUTS, "outgoing.csv"), DataFrame;
++    types=Dict(:trip_id=>String, :departure_time=>String))
+ links = CSV.read(joinpath(INPUTS, "vehicle_links.csv"), DataFrame;
+     types=Dict(:predecessor_trip_id=>String,:successor_trip_id=>String))
+ headways = CSV.read(joinpath(INPUTS, "headway_limits.csv"), DataFrame;
+     types=Dict(:earlier_trip_id=>String,:later_trip_id=>String))
+-limits = CSV.read(joinpath(INPUTS, "shift_bounds_checked.csv"), DataFrame)
++limits = CSV.read(joinpath(INPUTS, "shift_bounds_checked.csv"), DataFrame;
++    types=Dict(:departure=>String))
+ params = CSV.read(joinpath(INPUTS,"model_parameters.csv"), DataFrame)
+ parameter = Dict(string(r.parameter)=>parse(Int,string(r.value)) for r in eachrow(params))
+ @assert parameter["integer_shift_step_seconds"] == 60
+@@ -91,6 +96,7 @@
+ 
+ model = Model(HiGHS.Optimizer)
+ set_time_limit_sec(model, 180.0)
++set_optimizer_attribute(model, "mip_rel_gap", 0.0)
+ # z(j,k)=1 if the selected Route 215 trip j shifts k whole minutes.
+ @variable(model, z[c in choices], Bin)
+ @constraint(model, [j in movable_ids], sum(z[(j,k)] for k in allowed[j]) == 1)
+@@ -158,13 +164,21 @@
+ @assert nrow(baseline)==41
+ @assert sum(baseline.wait_seconds)==33240
+ @assert all(baseline.served)
++CSV.write(joinpath(OUTPUTS,"jump_baseline_connections.csv"),baseline)
+ println("BASELINE: mean post-allowance wait = ",sum(baseline.wait_seconds)/41/60," min")
+ 
+ optimize!(model)
+ println("JuMP termination status: ",termination_status(model))
+ println("JuMP primal status: ",primal_status(model))
+-if !has_values(model)
+-    error("Solver returned no feasible timetable; inspect statuses and constraints")
++open(joinpath(OUTPUTS, "jump_solver_summary.txt"), "w") do io
++    print(io, solution_summary(model))
++end
++if !has_values(model) || primal_status(model) != JuMP.MOI.FEASIBLE_POINT
++    error("Solver returned no certified feasible primal result; inspect jump_solver_summary.txt")
++end
++optimality_proven = termination_status(model) == JuMP.MOI.OPTIMAL
++if !optimality_proven
++    @warn "A feasible incumbent is available, but global optimality was not established."
+ end
+ shifts = Dict(j => round(Int,value(x[j])) for j in movable_ids)
+ result = evaluate(shifts)
+@@ -172,7 +186,13 @@
+ println("Selected 6 trip shifts (minutes): ",[shifts[j] for j in movable_ids])
+ println("Independently reevaluated mean wait: ",mean_wait, " min")
+ println("JuMP model objective: ",objective_value(model)," min")
+-@assert abs(mean_wait-objective_value(model))<1e-5
++if optimality_proven
++    @assert abs(mean_wait-objective_value(model)) < 1e-5
++else
++    # At a time limit, choosing the earliest feasible bus may improve the
++    # incumbent's transfer assignment without changing its timetable.
++    @assert mean_wait <= objective_value(model) + 1e-5
++end
+ @assert all(result.served)
+ 
+ # Check constraints independent of solver construction.
+@@ -194,7 +214,8 @@
+ CSV.write(joinpath(OUTPUTS,"jump_shift_schedule.csv"),summary)
+ 
+ # Write the entire modified stop-time trajectory; no travel time is shortened.
+-stops=CSV.read(joinpath(INPUTS,"selected_trip_stop_times.csv"),DataFrame; types=Dict(:trip_id=>String))
++stops=CSV.read(joinpath(INPUTS,"selected_trip_stop_times.csv"),DataFrame;
++    types=Dict(:trip_id=>String, :arrival_time=>String, :departure_time=>String))
+ stops.optimized_arrival_time=[hms(parse_hms(t)+60*shifts[string(j)]) for (j,t) in zip(stops.trip_id,stops.arrival_time)]
+ stops.optimized_departure_time=[hms(parse_hms(t)+60*shifts[string(j)]) for (j,t) in zip(stops.trip_id,stops.departure_time)]
+ CSV.write(joinpath(OUTPUTS,"jump_selected_trip_stop_times.csv"),stops)

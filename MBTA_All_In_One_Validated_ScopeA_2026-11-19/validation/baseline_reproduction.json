@@ -1,0 +1,54 @@
+[
+  {
+    "filename": "baseline_connections.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "block_trip_endpoints.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "feed_info.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "headway_limits.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "incoming.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "outgoing.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "selected_trip_stop_times.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "vehicle_links.csv",
+    "archived_rebuild_matches_original_input": true
+  },
+  {
+    "filename": "enumeration_results.json",
+    "rerun_matches_original": true
+  },
+  {
+    "filename": "optimized_connections.csv",
+    "rerun_matches_original": true
+  },
+  {
+    "filename": "optimized_outgoing.csv",
+    "rerun_matches_original": true
+  },
+  {
+    "filename": "per_opportunity_changes.csv",
+    "rerun_matches_original": true
+  },
+  {
+    "filename": "recommended_departure_shifts.csv",
+    "rerun_matches_original": true
+  }
+]

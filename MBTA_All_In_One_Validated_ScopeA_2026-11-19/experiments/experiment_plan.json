@@ -1,0 +1,636 @@
+{
+  "created_date": "2026-11-19",
+  "primary_population": "same 41 scheduled incoming trips on 2026-10-15; no new data collection or delay scenarios",
+  "objective": "equal-weight mean waiting after transfer allowance; full-day onward service retained",
+  "parameters_are": "declared study assumptions, not measured operating requirements",
+  "primary_heuristic": {
+    "name": "single_chronological_pass",
+    "definition": "Start from zero shifts. Visit the six original departure times in chronological order once. For the current trip, evaluate every permitted grid shift while holding the other five at their present values. Reject any full-timetable constraint violation. Adopt a change only if it strictly lowers total waiting. Among equal-cost improving changes, choose smallest absolute shift, then earlier departure. Do not revisit earlier trips.",
+    "starting_point_must_be_feasible": true,
+    "no_optimum_information_used": true
+  },
+  "supplementary_heuristic": "Repeat chronological passes until a full pass has no strictly improving feasible coordinate move; report separately, never replace primary benchmark with best-performing variant.",
+  "comparison_rules": [
+    "Rebuild shift domains and vehicle/headway RHS for every parameter case.",
+    "Evaluate status quo, newly reoptimized schedule, and unchanged nominal optimum separately.",
+    "Do not quote percentage improvement against an infeasible baseline.",
+    "Infeasible domains and infeasible MILPs remain explicitly infeasible, not missing observations.",
+    "Retain source files and old results unchanged; write new runs separately.",
+    "All non-stranded costs are independently evaluated using earliest eligible departure.",
+    "Exact enumeration is used when grid product <= 2000000; otherwise solver optimum is checked by independent timetable evaluation.",
+    "Solver tolerances are reported; a time limit does not count as proven optimal.",
+    "Ablations are diagnostic relaxed models, not deployment recommendations.",
+    "No parameter values are tuned after viewing new heuristic outcomes."
+  ],
+  "cases": [
+    {
+      "name": "nominal",
+      "groups": [
+        "primary",
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r120_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 120,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r120_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 120,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r120_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 120,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r180_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 180,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r180_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r180_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 180,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r300_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 300,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r300_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 300,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t120_r300_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 120,
+        "turnaround_seconds": 300,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r120_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 120,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r120_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 120,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r120_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 120,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r180_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r180_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r300_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 300,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r300_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 300,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t180_r300_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 300,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r120_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 120,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r120_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 120,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r120_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 120,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r180_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 180,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r180_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r180_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 180,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r300_b0",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 300,
+        "berth_seconds": 0,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r300_b120",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 300,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "joint_t300_r300_b180",
+      "groups": [
+        "joint_sensitivity"
+      ],
+      "parameters": {
+        "transfer_seconds": 300,
+        "turnaround_seconds": 300,
+        "berth_seconds": 180,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "shift_cap_0",
+      "groups": [
+        "one_at_a_time"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 0,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "shift_cap_120",
+      "groups": [
+        "one_at_a_time"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 120,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "headway_tolerance_0",
+      "groups": [
+        "one_at_a_time"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 0,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "headway_tolerance_120",
+      "groups": [
+        "one_at_a_time"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 120,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "headway_tolerance_600",
+      "groups": [
+        "one_at_a_time"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 600,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "readiness_boundary_181",
+      "groups": [
+        "readiness_boundary"
+      ],
+      "parameters": {
+        "transfer_seconds": 181,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "readiness_boundary_210",
+      "groups": [
+        "readiness_boundary"
+      ],
+      "parameters": {
+        "transfer_seconds": 210,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "half_minute_grid",
+      "groups": [
+        "grid_resolution"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 30,
+        "enforce_vehicle": true,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "no_vehicle_constraints",
+      "groups": [
+        "ablation"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": false,
+        "enforce_headways": true
+      }
+    },
+    {
+      "name": "no_headway_constraints",
+      "groups": [
+        "ablation"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": true,
+        "enforce_headways": false
+      }
+    },
+    {
+      "name": "no_vehicle_or_headway_constraints",
+      "groups": [
+        "ablation"
+      ],
+      "parameters": {
+        "transfer_seconds": 180,
+        "turnaround_seconds": 180,
+        "berth_seconds": 120,
+        "max_shift_seconds": 300,
+        "headway_deviation_seconds": 300,
+        "grid_seconds": 60,
+        "enforce_vehicle": false,
+        "enforce_headways": false
+      }
+    }
+  ]
+}

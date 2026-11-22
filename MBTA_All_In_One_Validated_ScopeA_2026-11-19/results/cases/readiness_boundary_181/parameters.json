@@ -1,0 +1,16 @@
+{
+  "name": "readiness_boundary_181",
+  "groups": [
+    "readiness_boundary"
+  ],
+  "parameters": {
+    "transfer_seconds": 181,
+    "turnaround_seconds": 180,
+    "berth_seconds": 120,
+    "max_shift_seconds": 300,
+    "headway_deviation_seconds": 300,
+    "grid_seconds": 60,
+    "enforce_vehicle": true,
+    "enforce_headways": true
+  }
+}

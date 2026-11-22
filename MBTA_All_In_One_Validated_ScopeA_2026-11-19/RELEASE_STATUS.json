@@ -1,0 +1,28 @@
+{
+  "release_date": "2026-11-19",
+  "source_collection_complete": true,
+  "original_zip_archives_included": 8,
+  "input_snapshot_changed": false,
+  "baseline_reproduction": "PASS",
+  "original_python_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "new_tests": {
+    "passed": 34,
+    "failed": 0
+  },
+  "experiment_cases": 38,
+  "feasible_optimal_cases": 32,
+  "infeasible_cases": 6,
+  "independent_enumeration_agreement_cases": 31,
+  "independent_timetable_row_checks": 5740,
+  "julia_execution": "PENDING_RUNTIME_UNAVAILABLE",
+  "julia_source_patch": "APPLIED_NOT_EXECUTION_VALIDATED",
+  "scope_b": "DEFERRED_NOT_EXECUTED",
+  "heuristic_nominal_result": "MATCHES_MILP_OPTIMUM",
+  "fixed_nominal_timetable_transfer_robustness": "NOT_ESTABLISHED; loses to baseline under longer allowance",
+  "latest_interim_report": "November 12 v2 preserved unchanged",
+  "new_document_type": "working validation/experiment memo, not final course report",
+  "no_background_work_promised": true
+}

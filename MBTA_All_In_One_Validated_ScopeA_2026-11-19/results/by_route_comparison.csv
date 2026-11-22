@@ -1,0 +1,3 @@
+route_id,opportunities,original_mean_wait_min,optimized_mean_wait_min,saved_total_min,improved,worsened,unchanged
+22,18,12.88888888888889,12.5,7.0,8,3,7
+23,23,14.0,12.434782608695652,36.0,10,4,9

@@ -1,0 +1,16 @@
+{
+  "status": "EXACT",
+  "candidate_grid_count": 5760,
+  "feasible_count": 5760,
+  "optimal_count": 1,
+  "optimal_total_wait_sec": 30420,
+  "shift_seconds": [
+    0,
+    120,
+    0,
+    60,
+    0,
+    -120
+  ],
+  "elapsed_seconds": 0.010560483000006116
+}

@@ -1,0 +1,32 @@
+family,item,actual,lower,upper,slack_lower,slack_upper,feasible,enforced
+shift_limit,78853769,0,0.0,300.0,0.0,300.0,True,True
+grid,78853769,0,,,,,True,True
+shift_limit,78853586,0,0.0,300.0,0.0,300.0,True,True
+grid,78853586,0,,,,,True,True
+shift_limit,78853725,0,0.0,300.0,0.0,300.0,True,True
+grid,78853725,0,,,,,True,True
+shift_limit,78853879,0,0.0,300.0,0.0,300.0,True,True
+grid,78853879,0,,,,,True,True
+shift_limit,78853674,0,0.0,300.0,0.0,300.0,True,True
+grid,78853674,0,,,,,True,True
+shift_limit,78853719,0,0.0,300.0,0.0,300.0,True,True
+grid,78853719,0,,,,,True,True
+vehicle,78853899 -> 78853586,300,180.0,,120.0,,True,True
+vehicle,78853586 -> 78853657,1080,300.0,,780.0,,True,True
+vehicle,78853787 -> 78853674,300,180.0,,120.0,,True,True
+vehicle,78853674 -> 78853645,480,180.0,,300.0,,True,True
+vehicle,78853907 -> 78853719,420,180.0,,240.0,,True,True
+vehicle,78853719 -> 78853810,360,180.0,,180.0,,True,True
+vehicle,78853797 -> 78853725,300,180.0,,120.0,,True,True
+vehicle,78853725 -> 78854381,540,300.0,,240.0,,True,True
+vehicle,78853803 -> 78853769,300,180.0,,120.0,,True,True
+vehicle,78853769 -> 78854574,360,300.0,,60.0,,True,True
+vehicle,78853889 -> 78853879,300,180.0,,120.0,,True,True
+vehicle,78853879 -> 78853861,960,300.0,,660.0,,True,True
+headway,78853585 -> 78853769,1800,1800.0,1800.0,0.0,0.0,True,True
+headway,78853769 -> 78853586,1800,1800.0,1800.0,0.0,0.0,True,True
+headway,78853586 -> 78853725,1800,1800.0,1800.0,0.0,0.0,True,True
+headway,78853725 -> 78853879,1800,1800.0,1800.0,0.0,0.0,True,True
+headway,78853879 -> 78853674,1800,1800.0,1800.0,0.0,0.0,True,True
+headway,78853674 -> 78853719,1920,1920.0,1920.0,0.0,0.0,True,True
+headway,78853719 -> 78853778,1680,1680.0,1680.0,0.0,0.0,True,True

@@ -1,0 +1,8 @@
+earlier_trip_id,later_trip_id,scheduled_headway_sec,minimum_headway_sec,maximum_headway_sec,basis
+78853585,78853769,1800,1500,2100,Assumption: preserve each original headway within configured deviation.
+78853769,78853586,1800,1500,2100,Assumption: preserve each original headway within configured deviation.
+78853586,78853725,1800,1500,2100,Assumption: preserve each original headway within configured deviation.
+78853725,78853879,1800,1500,2100,Assumption: preserve each original headway within configured deviation.
+78853879,78853674,1800,1500,2100,Assumption: preserve each original headway within configured deviation.
+78853674,78853719,1920,1620,2220,Assumption: preserve each original headway within configured deviation.
+78853719,78853778,1680,1380,1980,Assumption: preserve each original headway within configured deviation.

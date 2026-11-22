@@ -1,0 +1,17 @@
+test_mip_matches_enumeration (test_scope_a.SciPyMIPCertificate.test_mip_matches_enumeration) ... ok
+test_after_window_departures (test_scope_a.ScopeAReproducibility.test_after_window_departures) ... ok
+test_all_connections_eligible (test_scope_a.ScopeAReproducibility.test_all_connections_eligible) ... ok
+test_best_feasible (test_scope_a.ScopeAReproducibility.test_best_feasible) ... ok
+test_consistency_model_input_penalty (test_scope_a.ScopeAReproducibility.test_consistency_model_input_penalty) ... ok
+test_hist_archive_signature (test_scope_a.ScopeAReproducibility.test_hist_archive_signature) ... ok
+test_increase_and_decrease_opportunities (test_scope_a.ScopeAReproducibility.test_increase_and_decrease_opportunities) ... ok
+test_model_optimum_vs_evaluator (test_scope_a.ScopeAReproducibility.test_model_optimum_vs_evaluator) ... ok
+test_roundtrip_baseline (test_scope_a.ScopeAReproducibility.test_roundtrip_baseline) ... ok
+test_study_counts (test_scope_a.ScopeAReproducibility.test_study_counts) ... ok
+test_trip_schedule_consistency (test_scope_a.ScopeAReproducibility.test_trip_schedule_consistency) ... ok
+test_zero_feasible (test_scope_a.ScopeAReproducibility.test_zero_feasible) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.060s
+
+OK

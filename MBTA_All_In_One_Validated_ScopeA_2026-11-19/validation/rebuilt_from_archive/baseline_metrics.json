@@ -1,0 +1,12 @@
+{
+  "transfer_allowance_sec": 180,
+  "opportunities": 41,
+  "served": 41,
+  "stranded": 0,
+  "mean_platform_wait_sec_served": 810.7317073170732,
+  "max_platform_wait_sec_served": 1800,
+  "mean_total_transfer_sec_served": 990.7317073170732,
+  "mean_waiting_cost_sec_all": 810.7317073170732,
+  "penalty_sec": 3600,
+  "share_with_platform_wait_le_10_min_all": 0.36585365853658536
+}

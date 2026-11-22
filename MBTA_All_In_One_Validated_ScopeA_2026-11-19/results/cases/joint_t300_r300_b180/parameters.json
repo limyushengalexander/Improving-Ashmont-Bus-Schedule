@@ -1,0 +1,16 @@
+{
+  "name": "joint_t300_r300_b180",
+  "groups": [
+    "joint_sensitivity"
+  ],
+  "parameters": {
+    "transfer_seconds": 300,
+    "turnaround_seconds": 300,
+    "berth_seconds": 180,
+    "max_shift_seconds": 300,
+    "headway_deviation_seconds": 300,
+    "grid_seconds": 60,
+    "enforce_vehicle": true,
+    "enforce_headways": true
+  }
+}

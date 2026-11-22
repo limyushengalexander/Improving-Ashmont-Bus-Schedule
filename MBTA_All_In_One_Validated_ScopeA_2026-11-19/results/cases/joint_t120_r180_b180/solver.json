@@ -1,0 +1,26 @@
+{
+  "status": "OPTIMAL",
+  "solver": "scipy.optimize.milp / HiGHS",
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "status_code": 0,
+  "binary_variables": 41,
+  "continuous_variables": 1372,
+  "constraints": 1028,
+  "build_seconds": 0.0030137859999967986,
+  "solve_seconds": 0.018745016000025316,
+  "elapsed_seconds": 0.02175914299999704,
+  "objective_total_wait_sec": 31260.0,
+  "objective_mean_wait_min": 12.707317073170733,
+  "objective_bound_total_wait_sec": 31260.0,
+  "relative_gap": 0.0,
+  "mip_nodes": 1,
+  "shift_seconds": [
+    -120,
+    -60,
+    120,
+    -120,
+    60,
+    -60
+  ],
+  "independent_recomputed_cost_sec": 31260
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PROVISIONAL_REQUIRES_REVIEW",
+  "incoming_counts": {
+    "22": 18,
+    "23": 23
+  },
+  "outgoing_all_day_count": 37,
+  "adjustable_outgoing_count": 6
+}

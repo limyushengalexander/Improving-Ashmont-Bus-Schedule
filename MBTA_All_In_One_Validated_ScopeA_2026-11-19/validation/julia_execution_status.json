@@ -1,0 +1,8 @@
+{
+  "julia_installed": false,
+  "julia_executed": false,
+  "official_download_attempt": "failed; DNS unavailable to julialang-s3.julialang.org and pkg.julialang.org; container.download also failed",
+  "patched_source_created": true,
+  "status": "BLOCKED_RUNTIME_UNAVAILABLE",
+  "no_new_julia_certificate": true
+}

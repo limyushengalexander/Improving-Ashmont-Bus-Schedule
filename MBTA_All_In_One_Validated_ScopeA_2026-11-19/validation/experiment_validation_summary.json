@@ -1,0 +1,21 @@
+{
+  "cases": 38,
+  "optimal_milp_cases": 32,
+  "infeasible_cases": 6,
+  "exact_enumeration_cases": 31,
+  "half_minute_grid_solved_but_not_enumerated": true,
+  "heuristic_matches_optimum_on_all_feasible_tested_cases": true,
+  "independent_row_checks": 5740,
+  "selected_stop_time_rows_verified": 300,
+  "block_neighbor_pairs_no_overlap_checked": 33,
+  "nominal_ready_at_exact_departure_opportunities": 7,
+  "baseline_ready_at_exact_departure_opportunities": 2,
+  "nominal_largest_individual_worsening_min": 2.0,
+  "nominal_largest_individual_improvement_min": 30.0,
+  "nominal_improved": 18,
+  "nominal_worsened": 7,
+  "nominal_unchanged": 16,
+  "julia_executed": false,
+  "scope_b_executed": false,
+  "new_raw_mbta_data_collected": false
+}

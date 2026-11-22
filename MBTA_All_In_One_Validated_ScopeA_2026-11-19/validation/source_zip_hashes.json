@@ -1,0 +1,50 @@
+[
+  {
+    "name": "20261014.zip",
+    "bytes": 22280207,
+    "sha256": "1b5cf25363f7385de8c22c22fe6a336d91dd68616494526ca14994e3b86dd004",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_Ashmont_Prepared_Data_2026-10-31.zip",
+    "bytes": 22920011,
+    "sha256": "ec842367084555aa64d8e64c246025501d9e2766541fdfa9b8901b43bc7499ed",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_Ashmont_Project_Starter_2026-10-16 (1).zip",
+    "bytes": 22407677,
+    "sha256": "1501f0ccb29b51927d4d4a81e8a8d739a6d7e8356e6bcf74175bb20ea4c4cf52",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_Ashmont_Research_and_Preparation_Kit_2026-10-31.zip",
+    "bytes": 27845,
+    "sha256": "b15c7eff73fdc02a04964e5c4d318f17bb2d93bcccb2edda9f7923ba32acbebe",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_Historical_GTFS_Reconciliation_2026-11-06.zip",
+    "bytes": 42944,
+    "sha256": "1186b9a42652d9290ab6abb5d988bdb030581adff8c67b9a27d96db5120303ae",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_Project_Consolidation_2026-11-12_PARTIAL.zip",
+    "bytes": 213126,
+    "sha256": "94422bd585ef9b71fee2435a2cf6baa5c64ff0f61fcc996e5be2dda8d371908b",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_ScopeA_Nov06_Model_and_Interim_Report.zip",
+    "bytes": 123304,
+    "sha256": "f20ba8d94113e2b48467166f7c4c893ecf74e8230a06a33c215574c9267f81ee",
+    "crc": "PASS"
+  },
+  {
+    "name": "MBTA_ScopeA_Oct23-29_Closure.zip",
+    "bytes": 8892,
+    "sha256": "13b2a989ce5dddda56d443db3568bd452b2f7bc8721dc18a863207071d17c3b8",
+    "crc": "PASS"
+  }
+]

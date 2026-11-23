@@ -1,13 +1,13 @@
 [
   {
     "path": "FILE_INVENTORY.txt",
-    "bytes": 31286,
-    "sha256": "6b133100987f57ee5c01be193eef6886fa5d1bc1626a96edaf3d3e7d6a3f4e81"
+    "bytes": 31339,
+    "sha256": "4543544e8ffdc28b73fb547f62aa88ab8d40b721f15d6289a71b816aef53079a"
   },
   {
     "path": "README_FIRST.md",
-    "bytes": 9737,
-    "sha256": "92d0e51874006baf0f80c533df01bcc5234d442014bbad57b18739bb49eadbf4"
+    "bytes": 9935,
+    "sha256": "ec2a09d7208817aba08ef88f1208c72c170d481903bb482c5a9ada07b4058074"
   },
   {
     "path": "RELEASE_STATUS.json",
@@ -308,6 +308,11 @@
     "path": "model/tests/test_scope_a.py",
     "bytes": 4637,
     "sha256": "14ada200f12b4718bc2d347e95f37d5cee8224af39944d50cb530dbda88e8472"
+  },
+  {
+    "path": "presentations/MBTA_Ashmont_TA_Review_2026-11-22.pptx",
+    "bytes": 439360,
+    "sha256": "f3fa448d42f3619a785f22731e6e23beeb917222ebf4ebdb54f310975fd3b984"
   },
   {
     "path": "requirements-python.txt",

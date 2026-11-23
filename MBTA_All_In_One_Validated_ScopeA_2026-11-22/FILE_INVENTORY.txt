@@ -61,6 +61,7 @@ model/src/setup_and_run.sh
 model/src/setup_and_run_reviewed.ps1
 model/src/setup_and_run_reviewed.sh
 model/tests/test_scope_a.py
+presentations/MBTA_Ashmont_TA_Review_2026-11-22.pptx
 requirements-python.txt
 results/ablations_checked_against_full_rules.csv
 results/all_affected_block_no_overlap_audit.csv

@@ -311,8 +311,8 @@
   },
   {
     "path": "presentations/MBTA_Ashmont_TA_Review_2026-11-22.pptx",
-    "bytes": 439360,
-    "sha256": "f3fa448d42f3619a785f22731e6e23beeb917222ebf4ebdb54f310975fd3b984"
+    "bytes": 171114,
+    "sha256": "e8a5fedea7897fd26be9061a16c8d099f155ecbc5b4625970417d61d03f6c30c"
   },
   {
     "path": "requirements-python.txt",

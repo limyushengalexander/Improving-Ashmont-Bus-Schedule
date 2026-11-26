@@ -1,13 +1,18 @@
 [
   {
     "path": "FILE_INVENTORY.txt",
-    "bytes": 31339,
-    "sha256": "4543544e8ffdc28b73fb547f62aa88ab8d40b721f15d6289a71b816aef53079a"
+    "bytes": 31376,
+    "sha256": "6957e27ed50444c591f8ed3ebd14cc6b311062395f25f37e3acba8eb67c5331e"
+  },
+  {
+    "path": "Optimization Project Discussion.docx",
+    "bytes": 2775768,
+    "sha256": "9f561b329ed077e35cf774285f286e366739fc8c801592f9b789929823a86deb"
   },
   {
     "path": "README_FIRST.md",
-    "bytes": 9935,
-    "sha256": "ec2a09d7208817aba08ef88f1208c72c170d481903bb482c5a9ada07b4058074"
+    "bytes": 10116,
+    "sha256": "ee1ef5963d64dae0a15595a27bf81f4d48b2f6e8b0728f6e9bbef851c3655ae5"
   },
   {
     "path": "RELEASE_STATUS.json",

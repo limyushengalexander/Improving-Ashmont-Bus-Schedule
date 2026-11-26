@@ -44,6 +44,7 @@ Complete source collection does **not** mean the entire term project is finished
 | `validation/` | Baseline lock, source hashes, actual run logs, tests, independent checks and Julia-status records |
 | `latest_interim/` | Latest November 12 v2 DOCX/PDF/Markdown, unchanged |
 | [TA discussion deck](presentations/MBTA_Ashmont_TA_Review_2026-11-22.pptx) | Five slides with speaker notes, explaining work through the November 12 interim report and questions for TA guidance |
+| [November 25 project discussion](Optimization%20Project%20Discussion.docx) | Original meeting transcript containing TA feedback and the team's discussion of possible next steps |
 | `docs/` | New validation memo, methods, findings, current status and source register |
 | `course_requirements/` | Original term-project description recovered from the consolidation |
 | `source_archives/` | All eight original archives, unmodified |
